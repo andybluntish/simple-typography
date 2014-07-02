@@ -3,6 +3,7 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+    name: 'typography',
 
     // Empty build directory
     clean: ['build'],
@@ -10,13 +11,21 @@ module.exports = function(grunt) {
     // Compile styles form SCSS to CSS
     sass: {
       build: {
-        files: [{
-          expand: true,
-          cwd: 'src',
-          src: '**/*.scss',
-          dest: 'build',
-          ext: '.css'
-        }]
+        files: {
+          'build/<%= name %>.css': ['src/<%= name %>.scss']
+        }
+      }
+    },
+
+    // Create a version that includes Normalize.css
+    concat: {
+      devVendor: {
+        files: {
+          'build/<%= name %>.pkg.css': [
+            'bower_components/normalize-css/normalize.css',
+            'build/<%= name %>.css'
+          ],
+        }
       }
     },
 
@@ -35,17 +44,14 @@ module.exports = function(grunt) {
     // Minify CSS
     cssmin: {
       build: {
-        files: [{
-          expand: true,
-          cwd: 'build',
-          src: '**/*.css',
-          dest: 'build',
-          ext: '.min.css'
-        }]
+        files: {
+          'build/<%= name %>.min.css': ['build/<%= name %>.css'],
+          'build/<%= name %>.pkg.min.css': ['build/<%= name %>.pkg.css']
+        }
       }
     },
 
-    // Watche files for changes
+    // Watch files for changes
     watch: {
       build: {
         files: ['src/**/*.scss'],
@@ -61,6 +67,7 @@ module.exports = function(grunt) {
   // Load plugins.
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-watch');
@@ -69,6 +76,7 @@ module.exports = function(grunt) {
   grunt.registerTask('compile', [
     'clean',
     'sass',
+    'concat',
     'autoprefixer',
     'cssmin'
   ]);
