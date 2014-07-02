@@ -1,5 +1,3 @@
 # Base Typographic Styles
 
-Simple CSS styles for nice typography - a good place to start.
-
-Placeholder text from [http://chrisvalleskey.com/fillerama](http://chrisvalleskey.com/fillerama)
+Simple CSS styles for nice typography - a good place to start. Uses [Normalize.css](http://necolas.github.io/normalize.css) as a base.
