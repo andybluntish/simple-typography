@@ -1,0 +1,15 @@
+{
+  "name": "typographic-styles",
+  "version": "0.1.0",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-autoprefixer": "^0.8.1",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-cssmin": "^0.10.0",
+    "grunt-contrib-sass": "^0.7.3",
+    "grunt-contrib-watch": "^0.6.1"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  }
+}
