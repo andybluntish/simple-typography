@@ -51,6 +51,25 @@ module.exports = function(grunt) {
       }
     },
 
+    // Development server
+    connect: {
+      options: {
+        livereload: 35729,
+        hostname: '0.0.0.0'
+      },
+      livereload: {
+        options: {
+          middleware: function(connect) {
+            return [
+              connect().use('/bower_components', connect.static('./bower_components')),
+              connect().use('/build', connect.static('./build')),
+              connect.static('example')
+            ];
+          }
+        }
+      }
+    },
+
     // Watch files for changes
     watch: {
       build: {
@@ -71,6 +90,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-connect');
 
   // Compile
   grunt.registerTask('compile', [
@@ -79,6 +99,13 @@ module.exports = function(grunt) {
     'concat',
     'autoprefixer',
     'cssmin'
+  ]);
+
+  // Livereload server
+  grunt.registerTask('serve', [
+    'compile',
+    'connect',
+    'watch'
   ]);
 
   // Default task
