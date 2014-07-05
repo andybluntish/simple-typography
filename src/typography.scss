@@ -7,7 +7,7 @@
 $_open-sans: 'Open Sans', sans-serif;
 
 $font-size: 100%;
-$line-height: 1.5;
+$line-height: 1.618;
 
 $body-font-family: $_open-sans;
 $heading-font-family: $_open-sans;
@@ -16,6 +16,29 @@ $heading-font-family: $_open-sans;
 // Colours
 $body-colour: #444;
 $heading-colour: #222;
+
+
+// Metrics
+$size: $line-height + 0rem;
+
+
+
+/**
+ * Mixins
+ */
+
+/* Vertical Rhythm */
+/* http://modularscale.com/scale/?px1=16&px2=14&ra1=1.618&ra2=0 */
+@mixin vertical-rhythm($fs) {
+  font-size: $fs + 0rem;
+  line-height: ($line-height / $fs) * ceil($fs / $line-height);
+  margin: $size 0;
+}
+
+/* Headings */
+@mixin headings($fs) {
+  @include vertical-rhythm($fs);
+}
 
 
 
@@ -35,28 +58,23 @@ textarea {
   color: $body-colour;
 }
 
+/* Blocks */
+p, ul, ol {
+  margin: $size 0;
+}
+
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-  margin: 1.5em 0 0.25em 0;
   font-family: $heading-font-family;
-  line-height: 1.1;
   color: $heading-colour;
 }
 
-/**
- * Font sizes based on Modular Scale
- * http://modularscale.com/scale/?px1=16&px2=24&ra1=1.618&ra2=0
- * http://modularscale.com/scale/?px1=16&px2=24&ra1=1.5&ra2=0
- */
-h1 {
-  margin: 1em 0;
-  font-size: 3.927em;
-}
-h2 { font-size: 2.618em; }
-h3 { font-size: 2.427em; }
-h4 { font-size: 1.618em; }
-h5 { font-size: 1.5em; }
-h6 { font-size: 1em; }
+h1 { @include headings(3.706); }
+h2 { @include headings(2.291); }
+h3 { @include headings(1.618); }
+h4 { @include headings(1.416); }
+h5 { @include headings(1); }
+h6 { @include headings(0.875); }
 
 
 
@@ -64,27 +82,27 @@ h6 { font-size: 1em; }
  * Layout
  */
 
-[role="main"] { padding: 0 0.5em; }
-p, ul, ol, figure, blockquote { margin: 0 0 1.5em 0; }
+// [role="main"] { padding: 0 0.5em; }
+// p, ul, ol, figure, blockquote { margin: 0 0 1.5em 0; }
 
-@media only screen and (min-width: 20em) {
-  [role="main"] { padding: 0 1.5em; }
-}
+// @media only screen and (min-width: 20em) {
+//   [role="main"] { padding: 0 1.5em; }
+// }
 
-@media only screen and (min-width: 34em) {
-  [role="main"] {
-    max-width: 32em;
-    margin: auto;
-    padding: 0;
-    line-height: 1.5;
-  }
-}
+// @media only screen and (min-width: 34em) {
+//   [role="main"] {
+//     max-width: 32em;
+//     margin: auto;
+//     padding: 0;
+//     // line-height: 1.5;
+//   }
+// }
 
-@media only screen and (min-width: 68.75em) {
-  html { font-size: 1.1em; }
+// @media only screen and (min-width: 68.75em) {
+//   html { font-size: 1.1em; }
 
-  [role="main"] {
-    max-width: 42em;
-    line-height: 1.75;
-  }
-}
+//   [role="main"] {
+//     max-width: 42em;
+//     // line-height: 1.75;
+//   }
+// }
