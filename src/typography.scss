@@ -7,7 +7,7 @@
 $_open-sans: 'Open Sans', sans-serif;
 
 $font-size: 100%;
-$line-height: 1.25;
+$line-height: 1.5;
 
 $body-font-family: $_open-sans;
 $heading-font-family: $_open-sans;
@@ -43,7 +43,11 @@ h1, h2, h3, h4, h5, h6 {
   color: $heading-colour;
 }
 
-/* Font sizes based on Modular Scale http://modularscale.com/scale/?px1=16&px2=24&ra1=1.618&ra2=0 */
+/**
+ * Font sizes based on Modular Scale
+ * http://modularscale.com/scale/?px1=16&px2=24&ra1=1.618&ra2=0
+ * http://modularscale.com/scale/?px1=16&px2=24&ra1=1.5&ra2=0
+ */
 h1 {
   margin: 1em 0;
   font-size: 3.927em;
