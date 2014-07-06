@@ -1,0 +1,88 @@
+/**
+ * Settings
+ */
+/**
+ * Mixins
+ */
+/* Vertical Rhythm */
+/* http://modularscale.com/scale/?px1=16&px2=14&ra1=1.618&ra2=0 */
+/**
+ * Typography
+ */
+/* Base font settings */
+html {
+  font-family: "Open Sans", sans-serif;
+  font-size: 90%;
+  line-height: 1.618;
+  color: #444444; }
+
+/* Blocks */
+p, ul, ol, figure, blockquote {
+  margin: 1.618rem 0; }
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Open Sans", sans-serif;
+  color: #222222; }
+
+h1 {
+  font-size: 3.706rem;
+  line-height: 1.30977;
+  margin: 1.618rem 0; }
+
+h2 {
+  font-size: 2.291rem;
+  line-height: 1.41248;
+  margin: 1.618rem 0; }
+
+h3 {
+  font-size: 1.618rem;
+  line-height: 1;
+  margin: 1.618rem 0; }
+
+h4 {
+  font-size: 1.416rem;
+  line-height: 1.14266;
+  margin: 1.618rem 0; }
+
+h5 {
+  font-size: 1rem;
+  line-height: 1.618;
+  margin: 1.618rem 0; }
+
+h6 {
+  font-size: 0.875rem;
+  line-height: 1.84914;
+  margin: 1.618rem 0; }
+
+/**
+ * Layout
+ */
+/* http://www.paulirish.com/2012/box-sizing-border-box-ftw */
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box; }
+
+[role="main"] {
+  padding: 0 0.809rem;
+  margin: auto; }
+
+/* 320 */
+@media only screen and (min-width: 20rem) {
+  html {
+    font-size: 100%; } }
+/* 480 */
+@media only screen and (min-width: 30rem) {
+  [role="main"] {
+    padding: 0 1.618rem;
+    max-width: 33.236rem; } }
+/* 768 */
+/* 1024 */
+@media only screen and (min-width: 64rem) {
+  html {
+    font-size: 110%; } }
+/* 1200 */
+@media only screen and (min-width: 75rem) {
+  html {
+    font-size: 125%; } }
