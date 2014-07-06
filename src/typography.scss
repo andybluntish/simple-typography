@@ -49,11 +49,7 @@ $double-size: $size * 2;
  */
 
 /* Base font settings */
-html,
-button,
-input,
-select,
-textarea {
+html {
   font-family: $body-font-family;
   font-size: $font-size;
   line-height: $line-height;
