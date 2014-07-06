@@ -6,7 +6,7 @@
 // Fonts
 $_open-sans: 'Open Sans', sans-serif;
 
-$font-size: 100%;
+$font-size: 90%;
 $line-height: 1.618;
 
 $body-font-family: $_open-sans;
@@ -20,6 +20,8 @@ $heading-colour: #222;
 
 // Metrics
 $size: $line-height + 0rem;
+$half-size: $size / 2;
+$double-size: $size * 2;
 
 
 
@@ -59,7 +61,7 @@ textarea {
 }
 
 /* Blocks */
-p, ul, ol {
+p, ul, ol, figure, blockquote {
   margin: $size 0;
 }
 
@@ -82,27 +84,46 @@ h6 { @include headings(0.875); }
  * Layout
  */
 
-// [role="main"] { padding: 0 0.5em; }
-// p, ul, ol, figure, blockquote { margin: 0 0 1.5em 0; }
+/* http://www.paulirish.com/2012/box-sizing-border-box-ftw */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
 
-// @media only screen and (min-width: 20em) {
-//   [role="main"] { padding: 0 1.5em; }
-// }
+[role="main"] {
+  padding: 0 $half-size;
+  margin: auto;
+}
 
-// @media only screen and (min-width: 34em) {
-//   [role="main"] {
-//     max-width: 32em;
-//     margin: auto;
-//     padding: 0;
-//     // line-height: 1.5;
-//   }
-// }
+/* 320 */
+@media only screen and (min-width: 20rem) {
+  html {
+    font-size: 100%;
+  }
+}
 
-// @media only screen and (min-width: 68.75em) {
-//   html { font-size: 1.1em; }
+/* 480 */
+@media only screen and (min-width: 30rem) {
+  [role="main"] {
+    padding: 0 $size;
+    max-width: 30rem + $double-size;
+  }
+}
 
-//   [role="main"] {
-//     max-width: 42em;
-//     // line-height: 1.75;
-//   }
-// }
+/* 768 */
+@media only screen and (min-width: 48rem) {
+
+}
+
+/* 1024 */
+@media only screen and (min-width: 64rem) {
+  html {
+    font-size: 110%;
+  }
+}
+
+/* 1200 */
+@media only screen and (min-width: 75rem) {
+  html {
+    font-size: 125%;
+  }
+}
