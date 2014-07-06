@@ -19,7 +19,7 @@ module.exports = function(grunt) {
 
     // Create a version that includes Normalize.css
     concat: {
-      devVendor: {
+      build: {
         files: {
           'build/<%= name %>.pkg.css': [
             'bower_components/normalize-css/normalize.css',
@@ -72,9 +72,15 @@ module.exports = function(grunt) {
 
     // Watch files for changes
     watch: {
-      build: {
+      scss: {
         files: ['src/**/*.scss'],
         tasks: ['compile'],
+        options: {
+          livereload: true
+        }
+      },
+      html: {
+        files: ['example/**/*.html'],
         options: {
           livereload: true
         }
