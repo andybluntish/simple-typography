@@ -37,11 +37,6 @@ $double-size: $size * 2;
   margin: $size 0;
 }
 
-/* Headings */
-@mixin headings($fs) {
-  @include vertical-rhythm($fs);
-}
-
 
 
 /**
@@ -67,12 +62,12 @@ h1, h2, h3, h4, h5, h6 {
   color: $heading-colour;
 }
 
-h1 { @include headings(3.706); }
-h2 { @include headings(2.291); }
-h3 { @include headings(1.618); }
-h4 { @include headings(1.416); }
-h5 { @include headings(1); }
-h6 { @include headings(0.875); }
+h1 { @include vertical-rhythm(3.706); }
+h2 { @include vertical-rhythm(2.291); }
+h3 { @include vertical-rhythm(1.618); }
+h4 { @include vertical-rhythm(1.416); }
+h5 { @include vertical-rhythm(1); }
+h6 { @include vertical-rhythm(0.875); }
 
 
 
