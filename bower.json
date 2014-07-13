@@ -14,11 +14,10 @@
   ],
   "license": "MIT",
   "ignore": [
-    "**/.*",
     "node_modules",
     "bower_components"
   ],
-  "dependencies": {
+  "devDependencies": {
     "normalize-css": "~3.0.1",
     "normalize-opentype.css": "~0.1.2"
   }
