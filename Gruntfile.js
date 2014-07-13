@@ -23,6 +23,7 @@ module.exports = function(grunt) {
         files: {
           'build/<%= name %>.pkg.css': [
             'bower_components/normalize-css/normalize.css',
+            'bower_components/normalize-opentype.css/normalize-opentype.css',
             'build/<%= name %>.css'
           ],
         }
