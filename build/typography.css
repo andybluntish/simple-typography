@@ -558,6 +558,7 @@ table thead, table tfoot {
  */
 /* Vertical Rhythm */
 /* http://modularscale.com/scale/?px1=16&px2=14&ra1=1.618&ra2=0 */
+/* Main Page Container */
 /**
  * Typography
  */
@@ -616,19 +617,23 @@ h6 {
      -moz-box-sizing: border-box;
           box-sizing: border-box; }
 
-[role="main"] {
+[role="banner"],
+[role="main"],
+[role="contentinfo"] {
   padding: 0 0.809rem;
   margin: auto; }
+  @media only screen and (min-width: 30rem) {
+    [role="banner"],
+    [role="main"],
+    [role="contentinfo"] {
+      padding: 0 1.618rem;
+      max-width: 33.236rem; } }
 
 /* 320 */
 @media only screen and (min-width: 20rem) {
   html {
     font-size: 100%; } }
 /* 480 */
-@media only screen and (min-width: 30rem) {
-  [role="main"] {
-    padding: 0 1.618rem;
-    max-width: 33.236rem; } }
 /* 768 */
 /* 1024 */
 @media only screen and (min-width: 64rem) {

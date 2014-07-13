@@ -37,6 +37,17 @@ $double-size: $size * 2;
   margin: $size 0;
 }
 
+/* Main Page Container */
+@mixin main-container() {
+  padding: 0 $half-size;
+  margin: auto;
+
+  @media only screen and (min-width: 30rem) {
+    padding: 0 $size;
+    max-width: 30rem + $double-size;
+  }
+}
+
 
 
 /**
@@ -80,9 +91,10 @@ h6 { @include vertical-rhythm(0.875); }
   box-sizing: border-box;
 }
 
-[role="main"] {
-  padding: 0 $half-size;
-  margin: auto;
+[role="banner"],
+[role="main"],
+[role="contentinfo"]{
+  @include main-container;
 }
 
 /* 320 */
@@ -94,10 +106,7 @@ h6 { @include vertical-rhythm(0.875); }
 
 /* 480 */
 @media only screen and (min-width: 30rem) {
-  [role="main"] {
-    padding: 0 $size;
-    max-width: 30rem + $double-size;
-  }
+
 }
 
 /* 768 */
