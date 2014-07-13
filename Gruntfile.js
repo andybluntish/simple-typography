@@ -21,7 +21,7 @@ module.exports = function(grunt) {
     concat: {
       build: {
         files: {
-          'build/<%= name %>.pkg.css': [
+          'build/<%= name %>.css': [
             'bower_components/normalize-css/normalize.css',
             'bower_components/normalize-opentype.css/normalize-opentype.css',
             'build/<%= name %>.css'
@@ -46,8 +46,7 @@ module.exports = function(grunt) {
     cssmin: {
       build: {
         files: {
-          'build/<%= name %>.min.css': ['build/<%= name %>.css'],
-          'build/<%= name %>.pkg.min.css': ['build/<%= name %>.pkg.css']
+          'build/<%= name %>.min.css': ['build/<%= name %>.css']
         }
       }
     },
