@@ -6,7 +6,7 @@
     "Andy Bluntish <andy@bluntish.net>"
   ],
   "description": "Simple CSS styles for nice typography.",
-  "main": "build/typography.css",
+  "main": "src/typography.scss",
   "keywords": [
     "typography",
     "style",
@@ -17,7 +17,7 @@
     "node_modules",
     "bower_components"
   ],
-  "devDependencies": {
+  "dependencies": {
     "normalize-css": "~3.0.1",
     "normalize-opentype.css": "~0.1.2"
   }
