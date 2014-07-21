@@ -1,91 +1,137 @@
-
-/**
- * Settings
- */
+/* ==========================================================================
+   Settings
+   ========================================================================== */
 
 // Fonts
-$_open-sans: 'Open Sans', sans-serif;
+$typography-font-family-sans:    'Open Sans', sans-serif !default;
+$typography-line-height:         1.618 !default;
+$typography-font-size:           90%   !default;
 
-$font-size: 90%;
-$line-height: 1.618;
+$typography-font-size-md:        100%  !default;
+$typography-font-size-lg:        110%  !default;
+$typography-font-size-xl:        125%  !default;
 
-$body-font-family: $_open-sans;
-$heading-font-family: $_open-sans;
+$typography-font-size-h1:        3.706 !default;
+$typography-font-size-h2:        2.291 !default;
+$typography-font-size-h3:        1.618 !default;
+$typography-font-size-h4:        1.416 !default;
+$typography-font-size-h5:        1     !default;
+$typography-font-size-h6:        0.875 !default;
 
+$typography-body-font-family:    $typography-font-family-sans !default;
+$typography-heading-font-family: $typography-font-family-sans !default;
 
-// Colours
-$body-colour: #444;
-$heading-colour: #222;
-
+// colors
+$typography-body-color:    #444 !default;
+$typography-heading-color: #222 !default;
 
 // Metrics
-$size: $line-height + 0rem;
-$half-size: $size / 2;
-$double-size: $size * 2;
+$typography-size:        $typography-line-height + 0rem !default;
+$typography-half-size:   $typography-size / 2 !default;
+$typography-double-size: $typography-size * 2 !default;
+
+$typography-container-max-width:   30rem !default;
+$typography-document-min-width-md: 20rem !default;
+$typography-document-min-width-lg: 64rem !default;
+$typography-document-min-width-xl: 75rem !default;
 
 
 
-/**
- * Mixins
- */
+/* ==========================================================================
+   Mixins
+   ========================================================================== */
 
-/* Vertical Rhythm */
-/* http://modularscale.com/scale/?px1=16&px2=14&ra1=1.618&ra2=0 */
-@mixin vertical-rhythm($fs) {
-  font-size: $fs + 0rem;
-  line-height: ($line-height / $fs) * ceil($fs / $line-height);
-  margin: $size 0;
-}
+/* Document (HTML Element) */
+@mixin typography-document() {
+  font-family: $typography-body-font-family;
+  font-size: $typography-font-size;
+  line-height: $typography-line-height;
+  color: $typography-body-color;
 
-/* Main Page Container */
-@mixin main-container() {
-  display: block;
-  margin: auto;
-  padding: 0 $half-size;
+  @media only screen and (min-width: $typography-document-min-width-md) {
+    font-size: $typography-font-size-md;
+  }
 
-  @media only screen and (min-width: 30rem) {
-    padding: 0 $size;
-    max-width: 30rem + $double-size;
+  @media only screen and (min-width: $typography-document-min-width-lg) {
+    font-size: $typography-font-size-lg;
+  }
+
+  @media only screen and (min-width: $typography-document-min-width-xl) {
+    font-size: $typography-font-size-xl;
   }
 }
 
+/* Main Page Container */
+@mixin typography-main-container() {
+  display: block;
+  margin: auto;
+  padding: 0 $typography-half-size;
+
+  @media only screen and (min-width: $typography-container-max-width) {
+    padding: 0 $typography-size;
+    max-width: $typography-container-max-width + $typography-double-size;
+  }
+}
+
+/* Vertical Rhythm */
+/* http://modularscale.com/scale/?px1=16&px2=14&ra1=1.618&ra2=0 */
+@mixin typography-vertical-rhythm($fs) {
+  font-size: $fs + 0rem;
+  line-height: ($typography-line-height / $fs) * ceil($fs / $typography-line-height);
+  margin: $typography-size 0;
+}
+
+/* Headings */
+@mixin typography-headings-base() {
+  font-family: $typography-heading-font-family;
+  color: $typography-heading-color;
+}
+
+@mixin typography-h1() { @include typography-vertical-rhythm($typography-font-size-h1); }
+@mixin typography-h2() { @include typography-vertical-rhythm($typography-font-size-h2); }
+@mixin typography-h3() { @include typography-vertical-rhythm($typography-font-size-h3); }
+@mixin typography-h4() { @include typography-vertical-rhythm($typography-font-size-h4); }
+@mixin typography-h5() { @include typography-vertical-rhythm($typography-font-size-h5); }
+@mixin typography-h6() { @include typography-vertical-rhythm($typography-font-size-h6); }
+
+/* Block Elements */
+@mixin typography-block-elements() {
+  margin: $typography-size 0;
+}
 
 
-/**
- * Typography
- */
+
+/* ==========================================================================
+   Defaults
+   ========================================================================== */
 
 /* Base font settings */
 html {
-  font-family: $body-font-family;
-  font-size: $font-size;
-  line-height: $line-height;
-  color: $body-colour;
+  @include typography-document;
 }
 
 /* Blocks */
 p, ul, ol, figure, blockquote {
-  margin: $size 0;
+  @include typography-block-elements;
 }
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-  font-family: $heading-font-family;
-  color: $heading-colour;
+  @include typography-headings-base;
 }
 
-h1 { @include vertical-rhythm(3.706); }
-h2 { @include vertical-rhythm(2.291); }
-h3 { @include vertical-rhythm(1.618); }
-h4 { @include vertical-rhythm(1.416); }
-h5 { @include vertical-rhythm(1); }
-h6 { @include vertical-rhythm(0.875); }
+h1 { @include typography-h1; }
+h2 { @include typography-h2; }
+h3 { @include typography-h3; }
+h4 { @include typography-h4; }
+h5 { @include typography-h5; }
+h6 { @include typography-h6; }
 
 
 
-/**
- * Layout
- */
+/* ==========================================================================
+   Layout
+   ========================================================================== */
 
 /* http://www.paulirish.com/2012/box-sizing-border-box-ftw */
 *, *:before, *:after {
@@ -95,36 +141,5 @@ h6 { @include vertical-rhythm(0.875); }
 [role="banner"],
 [role="main"],
 [role="contentinfo"]{
-  @include main-container;
-}
-
-/* 320 */
-@media only screen and (min-width: 20rem) {
-  html {
-    font-size: 100%;
-  }
-}
-
-/* 480 */
-@media only screen and (min-width: 30rem) {
-
-}
-
-/* 768 */
-@media only screen and (min-width: 48rem) {
-
-}
-
-/* 1024 */
-@media only screen and (min-width: 64rem) {
-  html {
-    font-size: 110%;
-  }
-}
-
-/* 1200 */
-@media only screen and (min-width: 75rem) {
-  html {
-    font-size: 125%;
-  }
+  @include typography-main-container;
 }
