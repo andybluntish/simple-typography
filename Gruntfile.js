@@ -8,25 +8,30 @@ module.exports = function(grunt) {
     // Empty build directory
     clean: ['build'],
 
-    // Compile styles form SCSS to CSS
-    sass: {
-      build: {
-        files: {
-          'build/<%= name %>.css': ['src/<%= name %>.scss']
-        }
-      }
-    },
-
     // Create a version that includes Normalize.css
     concat: {
       build: {
         files: {
-          'build/<%= name %>.css': [
+          'build/example.scss': [
             'bower_components/normalize-css/normalize.css',
             'bower_components/normalize-opentype.css/normalize-opentype.css',
-            'build/<%= name %>.css'
+            'src/<%= name %>.scss',
+            'src/layout.scss'
           ],
         }
+      }
+    },
+
+    // Compile styles form SCSS to CSS
+    sass: {
+      build: {
+        files: [{
+          expand: true,
+          cwd: 'build',
+          src: '**/*.scss',
+          ext: '.css',
+          dest: 'build'
+        }]
       }
     },
 
@@ -46,7 +51,7 @@ module.exports = function(grunt) {
     cssmin: {
       build: {
         files: {
-          'build/<%= name %>.min.css': ['build/<%= name %>.css']
+          'build/example.min.css': ['build/example.css']
         }
       }
     },
@@ -101,8 +106,8 @@ module.exports = function(grunt) {
   // Compile
   grunt.registerTask('compile', [
     'clean',
-    'sass',
     'concat',
+    'sass',
     'autoprefixer',
     'cssmin'
   ]);
