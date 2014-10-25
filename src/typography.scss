@@ -90,7 +90,7 @@ $typography-container-max-width:   $typography-document-min-width-sm !default;
 @mixin typography-vertical-rhythm($fs) {
   font-size: $fs + 0rem;
   line-height: ($typography-line-height / $fs) * ceil($fs / $typography-line-height);
-  margin: $typography-size 0;
+  margin: ($typography-size + ($typography-size * 0.666)) 0 ($typography-size * 0.333);
 }
 
 /* Headings */
@@ -108,7 +108,7 @@ $typography-container-max-width:   $typography-document-min-width-sm !default;
 
 /* Block Elements */
 @mixin typography-block-elements() {
-  margin: $typography-size 0;
+  margin: 0 0 $typography-size;
 }
 
 
@@ -132,7 +132,10 @@ h1, h2, h3, h4, h5, h6 {
   @include typography-headings-base;
 }
 
-h1 { @include typography-h1; }
+h1 {
+  @include typography-h1;
+  margin: $typography-font-size-h1 + rem 0;
+}
 h2 { @include typography-h2; }
 h3 { @include typography-h3; }
 h4 { @include typography-h4; }
