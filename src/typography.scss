@@ -5,11 +5,13 @@
 // Fonts
 $typography-font-family-sans:    'Open Sans', sans-serif !default;
 $typography-line-height:         1.618 !default;
-$typography-font-size:           90%   !default;
 
+$typography-font-size-original:  85%   !default;
+$typography-font-size-xs:        90%   !default;
+$typography-font-size-sm:        95%   !default;
 $typography-font-size-md:        100%  !default;
 $typography-font-size-lg:        110%  !default;
-$typography-font-size-xl:        125%  !default;
+$typography-font-size-xl:        120%  !default;
 
 $typography-font-size-h1:        3.706 !default;
 $typography-font-size-h2:        2.291 !default;
@@ -30,11 +32,13 @@ $typography-size:        $typography-line-height + 0rem !default;
 $typography-half-size:   $typography-size / 2 !default;
 $typography-double-size: $typography-size * 2 !default;
 
-$typography-container-max-width:   30rem !default;
-$typography-document-min-width-md: 20rem !default;
-$typography-document-min-width-lg: 64rem !default;
-$typography-document-min-width-xl: 75rem !default;
+$typography-document-min-width-xs: 20rem !default; // 320
+$typography-document-min-width-sm: 30rem !default; // 480
+$typography-document-min-width-md: 48rem !default; // 768
+$typography-document-min-width-lg: 64rem !default; // 1024
+$typography-document-min-width-xl: 75rem !default; // 1200
 
+$typography-container-max-width:   $typography-document-min-width-sm !default;
 
 
 /* ==========================================================================
@@ -44,9 +48,17 @@ $typography-document-min-width-xl: 75rem !default;
 /* Document (HTML Element) */
 @mixin typography-document() {
   font-family: $typography-body-font-family;
-  font-size: $typography-font-size;
+  font-size: $typography-font-size-original;
   line-height: $typography-line-height;
   color: $typography-body-color;
+
+  @media only screen and (min-width: $typography-document-min-width-xs) {
+    font-size: $typography-font-size-xs;
+  }
+
+  @media only screen and (min-width: $typography-document-min-width-sm) {
+    font-size: $typography-font-size-sm;
+  }
 
   @media only screen and (min-width: $typography-document-min-width-md) {
     font-size: $typography-font-size-md;
