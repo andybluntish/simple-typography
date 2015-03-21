@@ -1,17 +1,24 @@
 {
   "name": "typographic-styles",
   "version": "0.1.0",
-  "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-autoprefixer": "^0.8.1",
-    "grunt-contrib-clean": "^0.5.0",
-    "grunt-contrib-concat": "^0.4.0",
-    "grunt-contrib-connect": "^0.8.0",
-    "grunt-contrib-cssmin": "^0.10.0",
-    "grunt-contrib-sass": "^0.7.3",
-    "grunt-contrib-watch": "^0.6.1"
+  "description": "Simple CSS styles for nice typography.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andybluntish/typographic-styles.git"
   },
-  "engines": {
-    "node": ">=0.10.0"
-  }
+  "keywords": [
+    "css",
+    "typography",
+    "type",
+    "styles",
+    "normalize",
+    "scss"
+  ],
+  "author": "Andy Stanford-Bluntish <andy@bluntish.net>",
+  "license": "MIT",
+  "private": true,
+  "bugs": {
+    "url": "https://github.com/andybluntish/typographic-styles/issues"
+  },
+  "homepage": "https://github.com/andybluntish/typographic-styles"
 }
