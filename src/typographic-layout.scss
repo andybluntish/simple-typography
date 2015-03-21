@@ -1,0 +1,28 @@
+/* ==========================================================================
+   Typographic Layout
+   ========================================================================== */
+
+@import "typographic-variables";
+
+
+/**
+ * box-sizing: border-box
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw
+ * http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
+ */
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.container {
+  max-width: $typographic-styles-break-md;
+  margin: auto;
+  padding: 0 $typographic-styles-half-size;
+}
