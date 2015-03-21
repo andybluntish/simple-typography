@@ -1,0 +1,25 @@
+{
+  "name": "typographic-styles",
+  "version": "0.1.0",
+  "homepage": "https://github.com/andybluntish/typographic-styles",
+  "authors": [
+    "Andy Bluntish <andy@bluntish.net>"
+  ],
+  "description": "Simple CSS styles for nice typography.",
+  "main": "typographic-styles.scss",
+  "keywords": [
+    "css",
+    "typography",
+    "type",
+    "styles",
+    "normalize",
+    "scss"
+  ],
+  "ignore": [
+    "node_modules",
+    "bower_components"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {}
+}

@@ -1,0 +1,24 @@
+{
+  "name": "typographic-styles",
+  "version": "0.1.0",
+  "description": "Simple CSS styles for nice typography.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andybluntish/typographic-styles.git"
+  },
+  "keywords": [
+    "css",
+    "typography",
+    "type",
+    "styles",
+    "normalize",
+    "scss"
+  ],
+  "author": "Andy Stanford-Bluntish <andy@bluntish.net>",
+  "license": "MIT",
+  "private": true,
+  "bugs": {
+    "url": "https://github.com/andybluntish/typographic-styles/issues"
+  },
+  "homepage": "https://github.com/andybluntish/typographic-styles"
+}
