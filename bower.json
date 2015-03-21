@@ -6,7 +6,7 @@
     "Andy Bluntish <andy@bluntish.net>"
   ],
   "description": "Simple CSS styles for nice typography.",
-  "main": "typographic-styles.scss",
+  "main": "src/typographic-styles.scss",
   "keywords": [
     "css",
     "typography",
@@ -21,5 +21,8 @@
   ],
   "license": "MIT",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "normalize-css": "~3.0.2",
+    "normalize-opentype.css": "~0.2.4"
+  }
 }
