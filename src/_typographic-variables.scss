@@ -33,6 +33,11 @@ $typographic-styles-font-size-h5:    (18/$typographic-styles-pxSize) * 1rem !def
 $typographic-styles-font-size-h6:    (16/$typographic-styles-pxSize) * 1rem !default;
 $typographic-styles-font-size-small: (12/$typographic-styles-pxSize) * 1rem !default;
 
+// Font weight
+$typographic-styles-font-weight-light:  300 !default;
+$typographic-styles-font-weight-normal: 400 !default;
+$typographic-styles-font-weight-bold:   700 !default;
+
 // Colours
 $typographic-styles-light-grey: #eee !default;
 $typographic-styles-grey:       #444 !default;
