@@ -11,6 +11,7 @@
 
 html {
   font-family: $typographic-styles-font-family;
+  font-weight: $typographic-styles-font-weight-normal;
   line-height: $typographic-styles-line-height;
   color: $typographic-styles-grey;
 
@@ -45,7 +46,7 @@ html {
 
 h1, h2, h3, h4, h5, h6 {
   margin: $typographic-styles-double-size 0 $typographic-styles-half-size;
-  font-weight: bold;
+  font-weight: $typographic-styles-font-weight-bold;
   line-height: 1.1;
   color: $typographic-styles-dark-grey;
 }
@@ -156,7 +157,7 @@ ul ul, ul ol {
 }
 
 dt {
-  font-weight: bold;
+  font-weight: $typographic-styles-font-weight-bold;
   font-style: italic;
 }
 
@@ -185,7 +186,7 @@ pre {
 
 .vcard {
   .org, .fn {
-    font-weight: bold;
+    font-weight: $typographic-styles-font-weight-bold;
   }
 }
 
@@ -195,7 +196,7 @@ pre {
  */
 
 b, strong, th {
-  font-weight: bold;
+  font-weight: $typographic-styles-font-weight-bold;
 }
 
 small {
