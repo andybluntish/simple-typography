@@ -173,10 +173,11 @@ dd {
 pre, code, kdb, samp, var {
   font-family: $simple-typography-font-family-monospace;
 }
+
 pre {
   background: $simple-typography-lighter-grey;
-  margin: $simple-typography-size ($simple-typography-size * -1);
-  padding: $simple-typography-size;
+  margin: $simple-typography-size ($simple-typography-half-size * -1);
+  padding: $simple-typography-half-size;
 }
 
 
