@@ -78,7 +78,7 @@ hr {
   margin: $simple-typography-size 0;
   border: 0;
   height: $simple-typography-thin-line-weight;
-  background: $simple-typography-light-grey;
+  background: $simple-typography-lighter-grey;
 }
 
 /* Blockquote */
@@ -86,7 +86,7 @@ blockquote {
   margin: $simple-typography-size;
   padding-left: $simple-typography-half-size;
   padding-right: $simple-typography-size;
-  border-left: $simple-typography-thin-line-weight solid $simple-typography-light-grey;
+  border-left: $simple-typography-thin-line-weight solid $simple-typography-lighter-grey;
   font-style: italic;
 }
 
@@ -130,20 +130,22 @@ th, td {
 }
 
 thead {
-  border-bottom: $simple-typography-thin-line-weight solid $simple-typography-light-grey;
+  border-bottom: $simple-typography-thin-line-weight solid $simple-typography-lighter-grey;
 }
 
 tfoot {
-  border-top: $simple-typography-thin-line-weight solid $simple-typography-light-grey;
+  border-top: $simple-typography-thin-line-weight solid $simple-typography-lighter-grey;
 
   th {
     font-style: italic;
+    font-weight: normal;
     font-size: $simple-typography-font-size-small;
+    color: $simple-typography-light-grey;
   }
 }
 
 tbody tr {
-  border-top: 1px solid $simple-typography-light-grey;
+  border-top: 1px solid $simple-typography-lighter-grey;
 }
 
 
@@ -157,8 +159,10 @@ ul ul, ul ol {
 }
 
 dt {
+  font-size: $simple-typography-font-size-small;
   font-weight: $simple-typography-font-weight-bold;
-  font-style: italic;
+  text-transform: uppercase;
+  color: $simple-typography-light-grey;
 }
 
 dd {
@@ -173,10 +177,11 @@ dd {
 pre, code, kdb, samp, var {
   font-family: $simple-typography-font-family-monospace;
 }
+
 pre {
-  background: $simple-typography-light-grey;
-  margin: $simple-typography-size ($simple-typography-size * -1);
-  padding: $simple-typography-size;
+  background: $simple-typography-lighter-grey;
+  margin: $simple-typography-size ($simple-typography-half-size * -1);
+  padding: $simple-typography-half-size;
 }
 
 
