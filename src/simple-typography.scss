@@ -157,8 +157,10 @@ ul ul, ul ol {
 }
 
 dt {
+  font-size: $simple-typography-font-size-small;
   font-weight: $simple-typography-font-weight-bold;
-  font-style: italic;
+  text-transform: uppercase;
+  color: $simple-typography-light-grey;
 }
 
 dd {
