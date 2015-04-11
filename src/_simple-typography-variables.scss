@@ -1,0 +1,52 @@
+/* ==========================================================================
+   Variables
+   ========================================================================== */
+
+// Metrics
+$simple-typography-pxSize:       16 !default;
+$simple-typography-line-height:  1.618 !default;
+$simple-typography-size:         ($simple-typography-line-height * 1rem) !default;
+$simple-typography-double-size:  $simple-typography-size * 2 !default;
+$simple-typography-half-size:    $simple-typography-size / 2 !default;
+$simple-typography-quarter-size: $simple-typography-size / 4 !default;
+
+$simple-typography-thin-line-weight: 3px !default;
+
+// Font families
+$simple-typography-font-family:           'Open Sans', 'Helvetica Neue', sans-serif !default;
+$simple-typography-font-family-monospace: 'Menlo', 'Monaco', monospace !default;
+
+// Font size
+$simple-typography-font-scale-xxs:  85% !default;
+$simple-typography-font-scale-xs:   90% !default;
+$simple-typography-font-scale-sm:   95% !default;
+$simple-typography-font-scale-md:   100% !default;
+$simple-typography-font-scale-lg:   105% !default;
+$simple-typography-font-scale-xl:   110% !default;
+
+$simple-typography-font-size:       1rem !default;
+$simple-typography-font-size-h1:    (48/$simple-typography-pxSize) * 1rem !default;
+$simple-typography-font-size-h2:    (36/$simple-typography-pxSize) * 1rem !default;
+$simple-typography-font-size-h3:    (24/$simple-typography-pxSize) * 1rem !default;
+$simple-typography-font-size-h4:    (21/$simple-typography-pxSize) * 1rem !default;
+$simple-typography-font-size-h5:    (18/$simple-typography-pxSize) * 1rem !default;
+$simple-typography-font-size-h6:    (16/$simple-typography-pxSize) * 1rem !default;
+$simple-typography-font-size-small: (12/$simple-typography-pxSize) * 1rem !default;
+
+// Font weight
+$simple-typography-font-weight-light:  300 !default;
+$simple-typography-font-weight-normal: 400 !default;
+$simple-typography-font-weight-bold:   700 !default;
+
+// Colours
+$simple-typography-lighter-grey: #f5f5f5 !default;
+$simple-typography-light-grey:   #777 !default;
+$simple-typography-grey:         #444 !default;
+$simple-typography-dark-grey:    #222 !default;
+
+// Breakpoints
+$simple-typography-break-xs: 20em !default; // 320
+$simple-typography-break-sm: 30em !default; // 480
+$simple-typography-break-md: 40em !default; // 640
+$simple-typography-break-lg: 48em !default; // 768
+$simple-typography-break-xl: 64em !default; // 1024

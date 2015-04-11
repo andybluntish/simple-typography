@@ -1,10 +1,10 @@
 {
-  "name": "typographic-styles",
-  "version": "1.0.1",
+  "name": "simple-typography",
+  "version": "2.0.0",
   "description": "Simple CSS styles for nice typography.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/andybluntish/typographic-styles.git"
+    "url": "https://github.com/andybluntish/simple-typography.git"
   },
   "keywords": [
     "css",
@@ -18,7 +18,7 @@
   "license": "MIT",
   "private": true,
   "bugs": {
-    "url": "https://github.com/andybluntish/typographic-styles/issues"
+    "url": "https://github.com/andybluntish/simple-typography/issues"
   },
-  "homepage": "https://github.com/andybluntish/typographic-styles"
+  "homepage": "https://github.com/andybluntish/simple-typography"
 }
