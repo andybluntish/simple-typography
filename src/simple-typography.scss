@@ -2,7 +2,7 @@
    Typographic Styles
    ========================================================================== */
 
-@import "typographic-variables";
+@import "simple-typography-variables";
 
 
 /**
@@ -10,32 +10,32 @@
  */
 
 html {
-  font-family: $typographic-styles-font-family;
-  font-weight: $typographic-styles-font-weight-normal;
-  line-height: $typographic-styles-line-height;
-  color: $typographic-styles-grey;
+  font-family: $simple-typography-font-family;
+  font-weight: $simple-typography-font-weight-normal;
+  line-height: $simple-typography-line-height;
+  color: $simple-typography-grey;
 
   /* Scale the root font size at different breakpoints */
-  font-size: $typographic-styles-font-scale-xxs;
+  font-size: $simple-typography-font-scale-xxs;
 
-  @media only screen and (min-width: $typographic-styles-break-xs) {
-    font-size: $typographic-styles-font-scale-xs;
+  @media only screen and (min-width: $simple-typography-break-xs) {
+    font-size: $simple-typography-font-scale-xs;
   }
 
-  @media only screen and (min-width: $typographic-styles-break-sm) {
-    font-size: $typographic-styles-font-scale-sm;
+  @media only screen and (min-width: $simple-typography-break-sm) {
+    font-size: $simple-typography-font-scale-sm;
   }
 
-  @media only screen and (min-width: $typographic-styles-break-md) {
-    font-size: $typographic-styles-font-scale-md;
+  @media only screen and (min-width: $simple-typography-break-md) {
+    font-size: $simple-typography-font-scale-md;
   }
 
-  @media only screen and (min-width: $typographic-styles-break-lg) {
-    font-size: $typographic-styles-font-scale-lg;
+  @media only screen and (min-width: $simple-typography-break-lg) {
+    font-size: $simple-typography-font-scale-lg;
   }
 
-  @media only screen and (min-width: $typographic-styles-break-xl) {
-    font-size: $typographic-styles-font-scale-xl;
+  @media only screen and (min-width: $simple-typography-break-xl) {
+    font-size: $simple-typography-font-scale-xl;
   }
 }
 
@@ -45,22 +45,22 @@ html {
  */
 
 h1, h2, h3, h4, h5, h6 {
-  margin: $typographic-styles-double-size 0 $typographic-styles-half-size;
-  font-weight: $typographic-styles-font-weight-bold;
+  margin: $simple-typography-double-size 0 $simple-typography-half-size;
+  font-weight: $simple-typography-font-weight-bold;
   line-height: 1.1;
-  color: $typographic-styles-dark-grey;
+  color: $simple-typography-dark-grey;
 }
 
 h1 {
-  margin: $typographic-styles-double-size 0;
-  font-size: $typographic-styles-font-size-h1;
+  margin: $simple-typography-double-size 0;
+  font-size: $simple-typography-font-size-h1;
 }
 
-h2 { font-size: $typographic-styles-font-size-h2; }
-h3 { font-size: $typographic-styles-font-size-h3; }
-h4 { font-size: $typographic-styles-font-size-h4; }
-h5 { font-size: $typographic-styles-font-size-h5; }
-h6 { font-size: $typographic-styles-font-size-h6; }
+h2 { font-size: $simple-typography-font-size-h2; }
+h3 { font-size: $simple-typography-font-size-h3; }
+h4 { font-size: $simple-typography-font-size-h4; }
+h5 { font-size: $simple-typography-font-size-h5; }
+h6 { font-size: $simple-typography-font-size-h6; }
 
 
 /**
@@ -70,23 +70,23 @@ h6 { font-size: $typographic-styles-font-size-h6; }
 p, blockquote, figure,
 ol, ul, dl,
 table, pre, .vcard {
-  margin: 0 0 $typographic-styles-size;
+  margin: 0 0 $simple-typography-size;
 }
 
 /* Horizontal Rule */
 hr {
-  margin: $typographic-styles-size 0;
+  margin: $simple-typography-size 0;
   border: 0;
-  height: $typographic-styles-thin-line-weight;
-  background: $typographic-styles-light-grey;
+  height: $simple-typography-thin-line-weight;
+  background: $simple-typography-light-grey;
 }
 
 /* Blockquote */
 blockquote {
-  margin: $typographic-styles-size;
-  padding-left: $typographic-styles-half-size;
-  padding-right: $typographic-styles-size;
-  border-left: $typographic-styles-thin-line-weight solid $typographic-styles-light-grey;
+  margin: $simple-typography-size;
+  padding-left: $simple-typography-half-size;
+  padding-right: $simple-typography-size;
+  border-left: $simple-typography-thin-line-weight solid $simple-typography-light-grey;
   font-style: italic;
 }
 
@@ -123,27 +123,27 @@ caption {
 }
 
 th, td {
-  padding: $typographic-styles-half-size $typographic-styles-size $typographic-styles-half-size 0;
+  padding: $simple-typography-half-size $simple-typography-size $simple-typography-half-size 0;
   &:last-child {
     padding-right: 0;
   }
 }
 
 thead {
-  border-bottom: $typographic-styles-thin-line-weight solid $typographic-styles-light-grey;
+  border-bottom: $simple-typography-thin-line-weight solid $simple-typography-light-grey;
 }
 
 tfoot {
-  border-top: $typographic-styles-thin-line-weight solid $typographic-styles-light-grey;
+  border-top: $simple-typography-thin-line-weight solid $simple-typography-light-grey;
 
   th {
     font-style: italic;
-    font-size: $typographic-styles-font-size-small;
+    font-size: $simple-typography-font-size-small;
   }
 }
 
 tbody tr {
-  border-top: 1px solid $typographic-styles-light-grey;
+  border-top: 1px solid $simple-typography-light-grey;
 }
 
 
@@ -157,12 +157,12 @@ ul ul, ul ol {
 }
 
 dt {
-  font-weight: $typographic-styles-font-weight-bold;
+  font-weight: $simple-typography-font-weight-bold;
   font-style: italic;
 }
 
 dd {
-  margin: 0 0 $typographic-styles-size;
+  margin: 0 0 $simple-typography-size;
 }
 
 
@@ -171,12 +171,12 @@ dd {
  */
 
 pre, code, kdb, samp, var {
-  font-family: $typographic-styles-font-family-monospace;
+  font-family: $simple-typography-font-family-monospace;
 }
 pre {
-  background: $typographic-styles-light-grey;
-  margin: $typographic-styles-size ($typographic-styles-size * -1);
-  padding: $typographic-styles-size;
+  background: $simple-typography-light-grey;
+  margin: $simple-typography-size ($simple-typography-size * -1);
+  padding: $simple-typography-size;
 }
 
 
@@ -186,7 +186,7 @@ pre {
 
 .vcard {
   .org, .fn {
-    font-weight: $typographic-styles-font-weight-bold;
+    font-weight: $simple-typography-font-weight-bold;
   }
 }
 
@@ -196,11 +196,11 @@ pre {
  */
 
 b, strong, th {
-  font-weight: $typographic-styles-font-weight-bold;
+  font-weight: $simple-typography-font-weight-bold;
 }
 
 small {
-  font-size: $typographic-styles-font-size-small;
+  font-size: $simple-typography-font-size-small;
 }
 
 q {

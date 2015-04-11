@@ -2,7 +2,7 @@
    Typographic Layout
    ========================================================================== */
 
-@import "typographic-variables";
+@import "simple-typography-variables";
 
 
 /**
@@ -22,7 +22,7 @@ html {
 }
 
 .container {
-  max-width: $typographic-styles-break-md;
+  max-width: $simple-typography-break-md;
   margin: auto;
-  padding: 0 $typographic-styles-half-size;
+  padding: 0 $simple-typography-half-size;
 }
