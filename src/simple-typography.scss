@@ -138,7 +138,9 @@ tfoot {
 
   th {
     font-style: italic;
+    font-weight: normal;
     font-size: $simple-typography-font-size-small;
+    color: $simple-typography-light-grey;
   }
 }
 
