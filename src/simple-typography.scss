@@ -1,0 +1,208 @@
+/* ==========================================================================
+   Typographic Styles
+   ========================================================================== */
+
+@import "simple-typography-variables";
+
+
+/**
+ * Document
+ */
+
+html {
+  font-family: $simple-typography-font-family;
+  font-weight: $simple-typography-font-weight-normal;
+  line-height: $simple-typography-line-height;
+  color: $simple-typography-grey;
+
+  /* Scale the root font size at different breakpoints */
+  font-size: $simple-typography-font-scale-xxs;
+
+  @media only screen and (min-width: $simple-typography-break-xs) {
+    font-size: $simple-typography-font-scale-xs;
+  }
+
+  @media only screen and (min-width: $simple-typography-break-sm) {
+    font-size: $simple-typography-font-scale-sm;
+  }
+
+  @media only screen and (min-width: $simple-typography-break-md) {
+    font-size: $simple-typography-font-scale-md;
+  }
+
+  @media only screen and (min-width: $simple-typography-break-lg) {
+    font-size: $simple-typography-font-scale-lg;
+  }
+
+  @media only screen and (min-width: $simple-typography-break-xl) {
+    font-size: $simple-typography-font-scale-xl;
+  }
+}
+
+
+/**
+ * Headings
+ */
+
+h1, h2, h3, h4, h5, h6 {
+  margin: $simple-typography-double-size 0 $simple-typography-half-size;
+  font-weight: $simple-typography-font-weight-bold;
+  line-height: 1.1;
+  color: $simple-typography-dark-grey;
+}
+
+h1 {
+  margin: $simple-typography-double-size 0;
+  font-size: $simple-typography-font-size-h1;
+}
+
+h2 { font-size: $simple-typography-font-size-h2; }
+h3 { font-size: $simple-typography-font-size-h3; }
+h4 { font-size: $simple-typography-font-size-h4; }
+h5 { font-size: $simple-typography-font-size-h5; }
+h6 { font-size: $simple-typography-font-size-h6; }
+
+
+/**
+ * Blocks
+ */
+
+p, blockquote, figure,
+ol, ul, dl,
+table, pre, .vcard {
+  margin: 0 0 $simple-typography-size;
+}
+
+/* Horizontal Rule */
+hr {
+  margin: $simple-typography-size 0;
+  border: 0;
+  height: $simple-typography-thin-line-weight;
+  background: $simple-typography-light-grey;
+}
+
+/* Blockquote */
+blockquote {
+  margin: $simple-typography-size;
+  padding-left: $simple-typography-half-size;
+  padding-right: $simple-typography-size;
+  border-left: $simple-typography-thin-line-weight solid $simple-typography-light-grey;
+  font-style: italic;
+}
+
+
+/**
+ * Media
+ */
+
+audio,
+canvas,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/**
+ * Tables
+ */
+
+table, caption {
+  text-align: left;
+}
+
+caption {
+  @extend h4;
+}
+
+th, td {
+  padding: $simple-typography-half-size $simple-typography-size $simple-typography-half-size 0;
+  &:last-child {
+    padding-right: 0;
+  }
+}
+
+thead {
+  border-bottom: $simple-typography-thin-line-weight solid $simple-typography-light-grey;
+}
+
+tfoot {
+  border-top: $simple-typography-thin-line-weight solid $simple-typography-light-grey;
+
+  th {
+    font-style: italic;
+    font-size: $simple-typography-font-size-small;
+  }
+}
+
+tbody tr {
+  border-top: 1px solid $simple-typography-light-grey;
+}
+
+
+/**
+ * Lists
+ */
+
+ol ol, ol ul,
+ul ul, ul ol {
+  margin-bottom: 0;
+}
+
+dt {
+  font-weight: $simple-typography-font-weight-bold;
+  font-style: italic;
+}
+
+dd {
+  margin: 0 0 $simple-typography-size;
+}
+
+
+/**
+ * Code
+ */
+
+pre, code, kdb, samp, var {
+  font-family: $simple-typography-font-family-monospace;
+}
+pre {
+  background: $simple-typography-light-grey;
+  margin: $simple-typography-size ($simple-typography-size * -1);
+  padding: $simple-typography-size;
+}
+
+
+/**
+ * VCard
+ */
+
+.vcard {
+  .org, .fn {
+    font-weight: $simple-typography-font-weight-bold;
+  }
+}
+
+
+/**
+ * Text-level
+ */
+
+b, strong, th {
+  font-weight: $simple-typography-font-weight-bold;
+}
+
+small {
+  font-size: $simple-typography-font-size-small;
+}
+
+q {
+  quotes: "“" "”" "‘" "’";
+}
