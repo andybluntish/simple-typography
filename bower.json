@@ -1,12 +1,12 @@
 {
-  "name": "typographic-styles",
+  "name": "simple-typography",
   "version": "1.0.1",
-  "homepage": "https://github.com/andybluntish/typographic-styles",
+  "homepage": "https://github.com/andybluntish/simple-typography",
   "authors": [
     "Andy Bluntish <andy@bluntish.net>"
   ],
   "description": "Simple CSS styles for nice typography.",
-  "main": "src/typographic-styles.scss",
+  "main": "src/simple-typography.scss",
   "keywords": [
     "css",
     "typography",
