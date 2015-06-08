@@ -20,5 +20,10 @@
   "bugs": {
     "url": "https://github.com/andybluntish/simple-typography/issues"
   },
-  "homepage": "https://github.com/andybluntish/simple-typography"
+  "homepage": "https://github.com/andybluntish/simple-typography",
+  "main": "src/simple-typography.scss",
+  "dependencies": {
+    "normalize-opentype.css": "^0.2.4",
+    "normalize.css": "^3.0.3"
+  }
 }
