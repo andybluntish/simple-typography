@@ -16,7 +16,6 @@
   ],
   "author": "Andy Stanford-Bluntish <andy@bluntish.net>",
   "license": "MIT",
-  "private": true,
   "bugs": {
     "url": "https://github.com/andybluntish/simple-typography/issues"
   },
